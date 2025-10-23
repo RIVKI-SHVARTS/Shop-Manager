@@ -1,0 +1,664 @@
+/* 
+
+body {
+    font-family: Arial, sans-serif;
+  }
+
+
+.navbar {
+    background-color: #4CAF50; 
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 128, 0, 0.2);
+    border-radius: 12px
+  }
+  
+  .navbar a {
+    color: #333;  
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+
+
+ 
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+
+
+  .purchases-container {
+    border: 2px solid #cce5cc;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 40px auto 0 auto; 
+}
+
+.purchases-container h1 {
+    text-align: center;
+    color: #2e5d34;
+    margin-bottom: 20px;
+}
+
+.purchases-container select,
+.purchases-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.purchases-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.purchases-container th,
+.purchases-container td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.purchases-container th {
+    background-color: #e0f0e0;
+    color: #333;
+}
+
+  
+.customers-container {
+    border: 2px solid #cce5cc;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: 40px auto 0 auto; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+.customers-container h1 {
+    text-align: center;
+    color: #2e5d34;
+    margin-bottom: 20px;
+}
+
+
+.customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.customers-table th,
+.customers-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.customers-table th {
+    background-color: #e0f0e0;
+    color: #333;
+}
+
+
+.customers-table .link {
+    color: #2e5d34;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.customers-table .link:hover {
+    color: #1c3f21;
+}
+
+
+.link {
+    color: #2e7d32;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+
+  .buy-product-container {
+    border: 2px solid #cce5cc;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: auto;
+    margin: 40px auto 0 auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .buy-product-container h1 {
+    text-align: center;
+    color: #2e5d34;
+    margin-bottom: 20px;
+  }
+  
+  .buy-product-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  } */
+
+
+
+/* בסיס כללי לכל האתר */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* כפתור ירוק אחיד */
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* סרגל ניווט ירוק ונקי */
+  .navbar {
+    background-color: #4CAF50;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 128, 0, 0.2);
+    border-radius: 12px;
+  }
+  
+  .navbar a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+  /* סגנון כללי לקונטיינרים (כמו customers, purchases וכו') */
+  .card-container {
+    border: 2px solid #cce5cc;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    max-width: 700px; /* מגביל את הרוחב */
+    margin: 40px auto 0 auto; /* ריווח מלמעלה + מרכז */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 40px auto 0 auto;
+  }
+  
+  /* כותרות */
+  .card-container h1 {
+    text-align: center;
+    color: #2e5d34;
+    margin-bottom: 20px;
+  }
+  
+  /* טבלאות אחידות */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #e0f0e0;
+    color: #333;
+  }
+  
+  /* שדות טופס אחידים */
+  select,
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* לינקים כלליים */
+  .link {
+    color: #2e7d32;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: #1b5e20;
+    font-weight: 700;
+  }
+  
+
+
+  /* עיצוב הקלטים */
+.card-container input[type="text"],
+.card-container input[type="number"],
+.card-container input[type="date"],
+.card-container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* עיצוב הפסקאות */
+.card-container p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* עיצוב כללי לכפתורים */
+.card-container button {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* כפתור שמירה – ירוק */
+.card-container .btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.card-container .btn-save:hover {
+    background-color: #218838;
+}
+
+/* כפתור מחיקה – אדום */
+.card-container .btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card-container .btn-delete:hover {
+    background-color: #c82333;
+}
+
+
+
+.products-wrapper {
+    position: relative;
+}
+
+.total-purchases-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e8f5e9; /* ירוק בהיר קבוע */
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 120px;
+}
+
+.total-purchases-box h1 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #388e3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.total-purchases-box span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.total-purchases-box:hover span {
+    transform: scale(1.2);
+}
+
+
+
+
+.bought-product-container {
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 10px auto;
+    max-width: 650px; /* היה 500px - עכשיו יותר רחב */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    max-height: 300px; /* גובה מקסימלי */
+    overflow-y: auto; /* גלילה אם צריך */
+}
+
+/* גלילה מעוצבת */
+.bought-product-container::-webkit-scrollbar {
+    width: 8px;
+}
+.bought-product-container::-webkit-scrollbar-thumb {
+    background-color: #c1dacf;
+    border-radius: 10px;
+}
+.bought-product-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.bought-product-title {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bought-product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.bought-product-item {
+    background-color: #f3f9f6;
+    padding: 10px;
+    border: 1px solid #cde0d8;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.bought-product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+}
+
+.bought-product-empty {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+}
+
+
+
+
+/* 
+.alert {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 16px;
+  color: #2e5d34; 
+  background-color: #fefefe; 
+  border: 2px solid #2e7d32;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.alert-error { 
+
+
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.alert-warning {
+ 
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+} 
+
+
+
+
+.fade-in-out {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-in-out.fade-out {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+} */
+
+/* .alert {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid #2e7d32;
+  background-color: #f9fef9;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  animation: fadeIn 0.4s ease forwards;
+} */
+
+/* .alert-error {
+  
+  border-color: #c62828;
+  background-color: #fef5f5;
+  color: #c62828;
+}
+
+
+  .alert {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+.alert {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: start;
+  flex-wrap: wrap;
+}
+
+/* Success - רגיל */
+.alert-success {
+  background-color: #d4edda;
+  color: #2e5d34;
+}
+
+/* Error */
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Delete (רקע אדום + אייקון בלבד) */
+.alert-delete {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Confirm Delete (לבן עם מסגרת אדומה) */
+.alert-confirmDelete {
+  background-color: #fff;
+  color: #c0392b;
+  border: 2px solid #c0392b;
+}
+
+/* אייקון */
+.alert-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* כפתורי אישור מחיקה */
+.alert-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.alert-buttons button {
+  padding: 8px 14px;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.alert-buttons .confirm {
+  border-color: #2e5d34;
+  color: #2e5d34;
+}
+
+.alert-buttons .cancel {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+
+
+
+
+
+
